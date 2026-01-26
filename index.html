@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti Bullying</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --dark:#0f172a;
+      --gray:#64748b;
+      --bg:#f8fafc;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--dark);
+    }
+
+    a{ text-decoration:none; color:inherit; }
+
+    /* NAVBAR */
+    nav{
+      position:sticky;
+      top:0;
+      background:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 60px;
+      box-shadow:0 4px 20px rgba(0,0,0,.05);
+      z-index:100;
+    }
+
+    nav h1{
+      font-size:1.3rem;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+      font-size:.95rem;
+    }
+
+    /* HERO */
+    .hero{
+      padding:120px 60px;
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .hero h2{
+      font-size:3rem;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      color:var(--gray);
+      margin-bottom:35px;
+      max-width:500px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 34px;
+      background:var(--primary);
+      color:#fff;
+      border-radius:30px;
+      font-weight:500;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(79,70,229,.3);
+    }
+
+    .hero-box{
+      overflow: hidden;
+      border: 1px solid #e0e7ff;
+      background:linear-gradient(135deg,#6366f1,#8b5cf6);
+      border-radius:28px;
+      height:320px;
+    }
+
+    .hero-box img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* CARDS */
+    .section{
+      padding:100px 60px;
+    }
+
+    .section h3{
+      font-size:2rem;
+      margin-bottom:50px;
+      text-align:center;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:22px;
+      padding:35px 30px;
+      transition:.3s;
+      cursor:pointer;
+      box-shadow:0 10px 30px rgba(0,0,0,.07);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 20px 50px rgba(0,0,0,.12);
+    }
+
+    .card h4{
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:var(--gray);
+      font-size:.9rem;
+    }
+
+    /* ABOUT */
+    .about{
+      background:#fff;
+      text-align:center;
+    }
+
+    .about p{
+      max-width:700px;
+      margin:20px auto 0;
+      color:var(--gray);
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--dark);
+      color:#cbd5f5;
+      padding:60px;
+      margin-top:100px;
+    }
+
+    footer .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:40px;
+    }
+
+    footer h4{
+      color:#fff;
+      margin-bottom:15px;
+    }
+
+    footer p, footer li{
+      font-size:.9rem;
+      margin-bottom:6px;
+      list-style:none;
+    }
+
+    footer .copy{
+      text-align:center;
+      margin-top:50px;
+      font-size:.8rem;
+      opacity:.7;
+    }
+
+    @media(max-width:900px){
+      .hero{
+        grid-template-columns:1fr;
+        padding:90px 30px;
+      }
+      nav{ padding:18px 30px; }
+      .section{ padding:80px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h1>AntiBullying</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="artikel.html">Artikel</a></li>
+    <li><a href="lapor.html">Lapor</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h2>Stop Bullying.<br>Mulai dari Kepedulian.</h2>
+    <p>
+      Platform edukasi dan pelaporan bullying untuk menciptakan lingkungan
+      yang aman, sehat, dan berempati.
+    </p>
+    <a href="lapor.html" class="btn">Laporkan Sekarang</a>
+  </div>
+  <div class="hero-box"><img src="img/a.JPG" alt=""></div>
+</section>
+
+<!-- CARDS -->
+<section class="section">
+  <h3>Fitur Utama</h3>
+  <div class="cards">
+    <div class="card" onclick="location.href='artikel.html'">
+      <h4>Apa itu Bullying?</h4>
+      <p>Kenali pengertian, jenis, dan dampak bullying.</p>
+    </div>
+    <div class="card" onclick="location.href='artikel.html'">
+      <h4>Artikel Edukasi</h4>
+      <p>Konten edukatif untuk siswa, guru, dan orang tua.</p>
+    </div>
+    <div class="card" onclick="location.href='lapor.html'">
+      <h4>Lapor Bullying</h4>
+      <p>Laporkan kejadian secara aman dan rahasia.</p>
+    </div>
+    <div class="card">
+      <h4>Dukungan Korban</h4>
+      <p>Informasi bantuan dan pendampingan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about">
+  <h3>Apa Itu Bullying?</h3>
+  <p>
+    Bullying adalah tindakan menyakiti orang lain secara fisik, verbal,
+    atau psikologis yang dilakukan berulang dan berdampak serius
+    terhadap kesehatan mental korban.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="grid">
+    <div>
+      <h4>AntiBullying</h4>
+      <p>Website edukasi & pelaporan bullying.</p>
+    </div>
+    <div>
+      <h4>Menu</h4>
+      <p>Home</p>
+      <p>Artikel</p>
+      <p>Lapor</p>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p>support@antibullying.id</p>
+    </div>
+  </div>
+  <div class="copy">
+    © 2026 Anti Bullying. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

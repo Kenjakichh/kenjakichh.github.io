@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artikel Anti Bullying</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --dark:#0f172a;
+      --gray:#64748b;
+      --bg:#f8fafc;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--dark);
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    nav{
+      position:sticky;
+      top:0;
+      background:#fff;
+      padding:18px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 4px 20px rgba(0,0,0,.05);
+    }
+
+    nav h1{
+      color:var(--primary);
+      font-size:1.3rem;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:30px;
+      font-size:.95rem;
+    }
+
+    /* HEADER */
+    .header{
+      padding:90px 60px 60px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .header h2{
+      font-size:2.6rem;
+      margin-bottom:15px;
+    }
+
+    .header p{
+      color:var(--gray);
+      max-width:600px;
+    }
+
+    /* ARTICLES */
+    .articles{
+      max-width:900px;
+      margin:auto;
+      padding:40px 60px 100px;
+      display:grid;
+      gap:30px;
+    }
+
+    .article{
+      animation: fadeUp both;
+      animation-timeline: view(60% 10%);
+      background:#fff;
+      border-radius:20px;
+      padding:30px;
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      transition:.3s;
+      cursor:pointer;
+    }
+
+    .article:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 50px rgba(0,0,0,.12);
+    }
+
+    .thumb{
+      overflow: hidden;
+      background:linear-gradient(135deg,#6366f1,#8b5cf6);
+      border-radius:16px;
+      height:120px;
+    }
+
+    .thumb img{ 
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .article h3{
+      margin-bottom:10px;
+      font-size:1.2rem;
+    }
+
+    .article p{
+      color:var(--gray);
+      font-size:.9rem;
+      margin-bottom:12px;
+    }
+
+    .meta{
+      font-size:.8rem;
+      color:#94a3b8;
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--dark);
+      color:#cbd5f5;
+      padding:60px;
+    }
+
+    footer .copy{
+      text-align:center;
+      font-size:.8rem;
+      opacity:.7;
+    }
+
+    @media(max-width:768px){
+      nav, .header, .articles{
+        padding-left:30px;
+        padding-right:30px;
+      }
+
+      .article{
+        grid-template-columns:1fr;
+      }
+
+      .thumb{
+        height:160px;
+      }
+    }
+    @keyframes fadeUp {
+  from {
+    opacity: o;
+    transform: translateY(10px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+}
+
+@keyframes imageReveal {
+  from{
+    filter: saturate(0),contrast(4),brightness(.1),blur(5px);
+    opacity: 0;
+    scale: .95;
+    translate: 0 4rem;
+  }
+  to{
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+  
+}
+
+@keyframes text-appear{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  } 
+}
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <h1>AntiBullying</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li>Artikel</li>
+    <li><a href="lapor.html">Lapor</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<section class="header">
+  <h2>Artikel Edukasi</h2>
+  <p>
+    Baca dan pahami berbagai artikel edukatif tentang bullying,
+    dampaknya, serta cara pencegahannya.
+  </p>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles">
+  <a href="detail-berbahaya.html#pengertian">
+  <div class="article">
+    <div class="thumb"><img src="img/IMG_4729.JPG" alt=""></div>
+    <div>
+      <h3>Apa Itu Bullying dan Mengapa Berbahaya?</h3>
+      <p>
+        Bullying bukan sekadar candaan. Ketahui pengertian,
+        jenis, dan dampak serius yang ditimbulkannya.
+      </p>
+      <div class="meta">Edukasi • 5 menit baca</div>
+    </div>
+  </div>
+  </a>
+  <a href="detail-berbahaya.html#Jenis">
+  <div class="article">
+    <div class="thumb"><img src="img/IMG_4730.JPG" alt=""></div>
+    <div>
+      <h3>Jenis-Jenis Bullying yang Sering Terjadi di Sekolah</h3>
+      <p>
+        Bullying fisik, verbal, sosial, hingga cyber bullying
+        yang sering tidak disadari.
+      </p>
+      <div class="meta">Sekolah • 6 menit baca</div>
+    </div>
+  </div>
+</a>
+   <a href="detail-berbahaya.html#Dampak">
+  <div class="article">
+    <div class="thumb"><img src="img/IMG_4731.JPG" alt=""></div>
+    <div>
+      <h3>Dampak Bullying terhadap Kesehatan Mental</h3>
+      <p>
+        Dampak jangka pendek dan panjang bullying terhadap
+        mental dan kepercayaan diri korban.
+      </p>
+      <div class="meta">Psikologi • 7 menit baca</div>
+    </div>
+  </div>
+  </a>
+  
+
+  <div class="article">
+    <div class="thumb"><img src="img/IMG_4732.JPG" alt=""></div>
+    <div>
+      <h3>Cara Mencegah Bullying di Lingkungan Sekolah</h3>
+      <p>
+        Peran siswa, guru, dan orang tua dalam menciptakan
+        lingkungan yang aman.
+      </p>
+      <div class="meta">Pencegahan • 5 menit baca</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="copy">
+    © 2026 Anti Bullying. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

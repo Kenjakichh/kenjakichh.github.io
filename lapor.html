@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lapor Bullying</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --danger:#ef4444;
+      --dark:#0f172a;
+      --gray:#64748b;
+      --bg:#f8fafc;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--dark);
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    nav{
+      position:sticky;
+      top:0;
+      background:#fff;
+      padding:18px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 4px 20px rgba(0,0,0,.05);
+      z-index:100;
+    }
+
+    nav h1{
+      color:var(--primary);
+      font-size:1.3rem;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:30px;
+      font-size:.95rem;
+    }
+
+    /* HEADER */
+    .header{
+      max-width:700px;
+      margin:80px auto 40px;
+      padding:0 30px;
+    }
+
+    .header h2{
+      font-size:2.2rem;
+      margin-bottom:12px;
+    }
+
+    .header p{
+      color:var(--gray);
+      font-size:.95rem;
+    }
+
+    /* FORM */
+    .form-wrapper{
+      max-width:700px;
+      margin:0 auto 120px;
+      padding:40px;
+      background:#fff;
+      border-radius:28px;
+      box-shadow:0 20px 50px rgba(0,0,0,.08);
+    }
+
+    .field{
+      margin-bottom:22px;
+    }
+
+    label{
+      display:block;
+      font-size:.9rem;
+      font-weight:500;
+      margin-bottom:8px;
+    }
+
+    input, textarea, select{
+      width:100%;
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid #e5e7eb;
+      font-size:.9rem;
+      outline:none;
+      transition:.2s;
+    }
+
+    input:focus, textarea:focus, select:focus{
+      border-color:var(--primary);
+      box-shadow:0 0 0 3px rgba(79,70,229,.15);
+    }
+
+    textarea{
+      resize:none;
+      min-height:120px;
+    }
+
+    .note{
+      background:#eef2ff;
+      padding:16px 18px;
+      border-radius:14px;
+      font-size:.85rem;
+      color:#4338ca;
+      margin-bottom:25px;
+    }
+
+    .checkbox{
+      display:flex;
+      gap:12px;
+      font-size:.85rem;
+      color:#475569;
+      margin-bottom:25px;
+    }
+
+    .checkbox input{
+      width:auto;
+      margin-top:3px;
+    }
+
+    .btn{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:30px;
+      background:var(--primary);
+      color:#fff;
+      font-size:1rem;
+      font-weight:500;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      box-shadow:0 15px 30px rgba(79,70,229,.35);
+      transform:translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--dark);
+      color:#cbd5f5;
+      padding:60px;
+    }
+
+    footer .copy{
+      text-align:center;
+      font-size:.8rem;
+      opacity:.7;
+    }
+
+    @media(max-width:768px){
+      nav{
+        padding:18px 30px;
+      }
+      .form-wrapper{
+        margin:0 20px 100px;
+        padding:30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <h1>AntiBullying</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="artikel.html">Artikel</a></li>
+    <li>Lapor</li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<section class="header">
+  <h2>Laporkan Tindakan Bullying</h2>
+  <p>
+    Laporan kamu akan ditangani secara rahasia.
+    Kamu tidak sendirian, dan kami di sini untuk membantu.
+  </p>
+</section>
+
+<!-- FORM -->
+<section class="form-wrapper">
+
+  <div class="note">
+    ⚠️ Kamu boleh mengisi laporan ini secara <strong>anonim</strong>.
+    Gunakan data yang benar agar laporan bisa ditindaklanjuti.
+  </div>
+
+  <form>
+    <div class="field">
+      <label>Nama Pelapor (opsional)</label>
+      <input type="text" placeholder="Boleh dikosongkan">
+    </div>
+
+    <div class="field">
+      <label>Peran Kamu</label>
+      <select>
+        <option>Korban</option>
+        <option>Saksi</option>
+        <option>Teman Korban</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Jenis Bullying</label>
+      <select>
+        <option>Bullying Verbal</option>
+        <option>Bullying Fisik</option>
+        <option>Bullying Sosial</option>
+        <option>Cyber Bullying</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Lokasi / Tempat Kejadian</label>
+      <input type="text" placeholder="Contoh: Sekolah, media sosial, dll">
+    </div>
+
+    <div class="field">
+      <label>Ceritakan Kejadian</label>
+      <textarea placeholder="Tuliskan kronologi kejadian secara singkat dan jelas"></textarea>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" required>
+      <span>Saya menyatakan laporan ini benar dan dibuat tanpa paksaan</span>
+    </div>
+
+    <button class="btn" type="submit">Kirim Laporan</button>
+  </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="copy">
+    © 2026 Anti Bullying. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

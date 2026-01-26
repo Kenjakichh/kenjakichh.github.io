@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apa Itu Bullying?</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --dark:#0f172a;
+      --gray:#64748b;
+      --bg:#f8fafc;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--dark);
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    nav{
+      position:sticky;
+      top:0;
+      background:#fff;
+      padding:18px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 4px 20px rgba(0,0,0,.05);
+      z-index:100;
+    }
+
+    nav h1{
+      color:var(--primary);
+      font-size:1.3rem;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:30px;
+      font-size:.95rem;
+    }
+
+    /* ARTICLE */
+    .article-wrapper{
+      max-width:850px;
+      margin:80px auto 120px;
+      padding:0 30px;
+    }
+
+    .category{
+      color:var(--primary);
+      font-size:.85rem;
+      font-weight:600;
+      margin-bottom:10px;
+    }
+
+    h2{
+      font-size:2.4rem;
+      line-height:1.3;
+      margin-bottom:15px;
+    }
+
+    .meta{
+      font-size:.85rem;
+      color:#94a3b8;
+      margin-bottom:40px;
+    }
+
+    .cover{
+      overflow: hidden;
+      width: 100%;
+      height:320px;
+      border-radius:26px;
+      border: 1px solid #e0e7ff; ;
+      background:linear-gradient(135deg,hsl(239, 84%, 67%),#8b5cf6);
+      margin-bottom:50px;
+    }
+
+    .cover img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content p{
+      animation: text-appear both;
+      animation-timeline: view(5% 0%);
+      animation-range: entry 20% cover 100vh;
+      margin-bottom:20px;
+      color:#334155;
+    }
+
+    .content h3{
+      animation: text-appear both;
+      animation-timeline: view(30% 1%);
+      animation-range: entry 20% cover 100vh;
+      margin:40px 0 15px;
+      font-size:1.4rem;
+    }
+
+    .quote{
+      margin:40px 0;
+      padding:25px 30px;
+      background:#eef2ff;
+      border-left:6px solid var(--primary);
+      border-radius:12px;
+      font-style:italic;
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:60px;
+      font-size:.9rem;
+      color:var(--primary);
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--dark);
+      color:#cbd5f5;
+      padding:60px;
+    }
+
+    footer .copy{
+      text-align:center;
+      font-size:.8rem;
+      opacity:.7;
+    }
+
+    @media(max-width:768px){
+      nav{
+        padding:18px 30px;
+      }
+      h2{
+        font-size:2rem;
+      }
+      .cover{
+        height:220px;
+      }
+    }
+    @keyframes imageReveal {
+  from{
+    filter: saturate(0),contrast(4),brightness(.1),blur(5px);
+    opacity: 0;
+    scale: .95;
+    translate: 0 4rem;
+  }
+  to{
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+  
+}
+
+@keyframes text-appear{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <h1>AntiBullying</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="artikel.html">Artikel</a></li>
+    <li><a href="lapor.html">Lapor</a></li>
+  </ul>
+</nav>
+
+<!-- ARTICLE -->
+<main class="article-wrapper">
+
+  <div class="category">Edukasi</div>
+  <h2 id="Pengertian">Apa Itu Bullying dan Mengapa Berbahaya?</h2>
+  <div class="meta">Ditulis oleh Admin • 5 menit baca</div>
+
+  <div class="cover"><img src="img/IMG_4727.JPG" alt=""></div>
+
+  <div class="content">
+    <p>
+      Bullying adalah tindakan menyakiti orang lain secara sengaja,
+      baik secara fisik, verbal, maupun psikologis, yang dilakukan
+      secara berulang dan menimbulkan penderitaan pada korban.
+    </p>
+
+    <p id="Jenis">
+      Banyak orang menganggap bullying sebagai candaan biasa,
+      padahal dampaknya bisa sangat serius dan berlangsung lama,
+      bahkan hingga dewasa.
+    </p>
+
+    <h3 >Jenis-Jenis Bullying</h3>
+    <p>
+      Bullying tidak selalu berupa kekerasan fisik. Berikut beberapa
+      jenis bullying yang sering terjadi:
+    </p>
+
+    <p>
+      • Bullying fisik (memukul, menendang, merusak barang) <br>
+      • Bullying verbal (menghina, mengejek, mengancam) <br>
+      • Bullying sosial (mengucilkan, menyebarkan rumor) <br>
+      • Cyber bullying (melalui media sosial atau pesan online)
+    </p>
+
+    <div id="Dampak" class="quote">
+      “Bullying bukan tentang bercanda, tapi tentang kekuasaan
+      dan rasa sakit yang dibiarkan terjadi.”
+    </div>
+
+    <h3>Dampak Bullying</h3>
+    <p>
+      Korban bullying dapat mengalami stres, kecemasan, depresi,
+      menurunnya kepercayaan diri, bahkan keinginan untuk
+      menyakiti diri sendiri.
+    </p>
+
+    <p>
+      Oleh karena itu, penting bagi kita semua untuk berani
+      berbicara, melapor, dan saling menjaga satu sama lain.
+    </p>
+
+    
+  </div>
+
+  <a href="artikel.html" class="back">← Kembali ke Artikel</a>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="copy">
+    © 2026 Anti Bullying. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
