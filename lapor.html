@@ -200,21 +200,20 @@
 
 <!-- FORM -->
 <section class="form-wrapper">
-
   <div class="note">
     ⚠️ Kamu boleh mengisi laporan ini secara <strong>anonim</strong>.
     Gunakan data yang benar agar laporan bisa ditindaklanjuti.
   </div>
 
-  <form>
-    <div class="field">
+  <form id="laporForm">
+    <div class="field" >
       <label>Nama Pelapor (opsional)</label>
-      <input type="text" placeholder="Boleh dikosongkan">
+      <input id="nama" type="text" placeholder="Boleh dikosongkan">
     </div>
 
     <div class="field">
       <label>Peran Kamu</label>
-      <select>
+      <select id="peran">
         <option>Korban</option>
         <option>Saksi</option>
         <option>Teman Korban</option>
@@ -223,7 +222,7 @@
 
     <div class="field">
       <label>Jenis Bullying</label>
-      <select>
+      <select id="jenis">
         <option>Bullying Verbal</option>
         <option>Bullying Fisik</option>
         <option>Bullying Sosial</option>
@@ -233,12 +232,12 @@
 
     <div class="field">
       <label>Lokasi / Tempat Kejadian</label>
-      <input type="text" placeholder="Contoh: Sekolah, media sosial, dll">
+      <input id="lokasi" type="text" placeholder="Contoh: Sekolah, media sosial, dll">
     </div>
 
     <div class="field">
       <label>Ceritakan Kejadian</label>
-      <textarea placeholder="Tuliskan kronologi kejadian secara singkat dan jelas"></textarea>
+      <textarea id="cerita" placeholder="Tuliskan kronologi kejadian secara singkat dan jelas"></textarea>
     </div>
 
     <div class="checkbox">
@@ -248,6 +247,11 @@
 
     <button class="btn" type="submit">Kirim Laporan</button>
   </form>
+</section>
+
+
+ 
+
 
 </section>
 
@@ -258,5 +262,36 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("CFkbz5TyS7dw-HFbB"); // dari EmailJS
+})();
+
+document.getElementById("laporForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  emailjs.send("service_07turkm", "template_u8fe14b", {
+    email: "kennk1376@gmail.com",
+    nama: document.getElementById("nama").value || "Anonim",
+    peran: document.getElementById("peran").value,
+    jenis: document.getElementById("jenis").value,
+    lokasi: document.getElementById("lokasi").value,
+    cerita: document.getElementById("cerita").value
+  }).then(
+    function(){
+      alert("Laporan berhasil dikirim. Terima kasih sudah berani melapor.");
+      document.getElementById("laporForm").reset();
+    },
+    function(){
+      alert("Gagal mengirim laporan. Silakan coba lagi.");
+    }
+  );
+});
+</script>
+
+
 </body>
+
 </html>
